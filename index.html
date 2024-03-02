@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <!-- Bootstrap CSS v5.3.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<marquee behavior="scroll" direction="left" scrollamount="8">
+    Welcome to KMIT College - Notice Board
+</marquee>
+
+<div class="container">
+    <h1>KMIT COLLEGE - Notice Board</h1>
+    <form id="noticeForm">
+        <textarea id="noticeInput" placeholder="Enter your notice here..."></textarea>
+        <button type="button" onclick="addNotice()">Add Notice</button>
+    </form>
+    <ul id="noticeList"></ul>
+
+    <h2>Upload Images for Carousel</h2>
+    <form id="imageForm">
+        <input type="file" id="imageInput" accept="image/*">
+        <button type="button" onclick="uploadImage()">Upload Image</button>
+    </form>
+    <div id="uploadedImages"></div>
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner" id="carouselInner">
+            <!-- Images will be dynamically added here -->
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Bootstrap JS and custom script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-6a1vrlf74k7qJl/y7FmfPEl+Y0zYAMG2vWQuLrT9DOQJeBC9KIttiNY6lvL+Yi+L" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
